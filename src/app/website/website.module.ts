@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { adminGuestGuard } from './guards/admin-guest.guard';
+import { StoreModule } from '@ngrx/store';
+import { DEFAULT_ROUTER_FEATURENAME, routerReducer } from '@ngrx/router-store';
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
+    StoreModule.forFeature(DEFAULT_ROUTER_FEATURENAME, routerReducer),
     RouterModule.forChild([
       {
         path: '',
@@ -17,7 +19,6 @@ import { adminGuestGuard } from './guards/admin-guest.guard';
       },
       {
         path: 'admin/auth',
-        canActivate: [adminGuestGuard],
         loadChildren: () =>
           import('./routing/admin-auth/admin-auth.module').then(
             (module) => module.AdminAuthModule

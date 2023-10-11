@@ -2,11 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { RouterModule } from '@angular/router';
+import { AdminLoginBlockModule } from 'src/app/view/admin-login-block/admin-login-block.module';
 
 @NgModule({
   declarations: [LoginPageComponent],
   imports: [
     CommonModule,
+    AdminLoginBlockModule,
+
     RouterModule.forChild([
       {
         path: '',
