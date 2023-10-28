@@ -1,8 +1,12 @@
-<ul>
-  <li routerLink="">Home Page</li>
-  <li routerLink="admin/auth/login">Login Page</li>
-  <li routerLink="admin/dashboard">Dashboard Page</li>
-  <li routerLink="**">404 Page</li>
-</ul>
+<mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+  <mat-button-toggle routerLink="">Home Page</mat-button-toggle>
+  <mat-button-toggle routerLink="admin/auth/login"
+    >Login Page</mat-button-toggle
+  >
+  <mat-button-toggle routerLink="admin/dashboard"
+    >Dashboard Page</mat-button-toggle
+  >
+  <mat-button-toggle routerLink="**">404 Page</mat-button-toggle>
+</mat-button-toggle-group>
 
 <router-outlet></router-outlet>

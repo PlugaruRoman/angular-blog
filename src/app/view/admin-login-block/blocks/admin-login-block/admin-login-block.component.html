@@ -1,5 +1,9 @@
-<p>Login Page</p>
 <app-admin-login-form-ui
-  [formError]="serverError"
+  [formError]="serverError$ | async"
   (login)="onLogin($event)"
 ></app-admin-login-form-ui>
+<mat-spinner *ngIf="loading$ | async"></mat-spinner>
+
+<button mat-raised-button color="primary" (click)="onTest()">
+  Test auth success
+</button>

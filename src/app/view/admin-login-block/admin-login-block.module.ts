@@ -5,6 +5,7 @@ import { AdminLoginBlockComponent } from './blocks/admin-login-block/admin-login
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -15,6 +16,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatButtonModule,
     ReactiveFormsModule,
+    MatProgressSpinnerModule,
   ],
   exports: [AdminLoginBlockComponent],
 })

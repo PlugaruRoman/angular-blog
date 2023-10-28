@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
 import { DEFAULT_ROUTER_FEATURENAME, routerReducer } from '@ngrx/router-store';
+import { adminGuestGuard } from './guards/admin-guest.guard';
 
 @NgModule({
   declarations: [],
@@ -23,6 +24,7 @@ import { DEFAULT_ROUTER_FEATURENAME, routerReducer } from '@ngrx/router-store';
           import('./routing/admin-auth/admin-auth.module').then(
             (module) => module.AdminAuthModule
           ),
+        canActivate: [adminGuestGuard],
       },
       {
         path: 'admin',
@@ -30,6 +32,7 @@ import { DEFAULT_ROUTER_FEATURENAME, routerReducer } from '@ngrx/router-store';
           import('./routing/admin/admin.module').then(
             (module) => module.AdminModule
           ),
+        canActivate: [adminGuestGuard],
       },
       {
         path: '**',
