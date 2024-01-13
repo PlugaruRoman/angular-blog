@@ -24,7 +24,6 @@ import { adminGuestGuard } from './guards/admin-guest.guard';
           import('./routing/admin-auth/admin-auth.module').then(
             (module) => module.AdminAuthModule
           ),
-        canActivate: [adminGuestGuard],
       },
       {
         path: 'admin',
@@ -32,7 +31,7 @@ import { adminGuestGuard } from './guards/admin-guest.guard';
           import('./routing/admin/admin.module').then(
             (module) => module.AdminModule
           ),
-        canActivate: [adminGuestGuard],
+        // canActivate: [adminGuestGuard],
       },
       {
         path: '**',

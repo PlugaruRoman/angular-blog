@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { AdminPageComponent } from './pages/admin-page/admin-page.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [AdminPageComponent],
   imports: [
     CommonModule,
     RouterModule.forChild([
@@ -14,6 +15,7 @@ import { RouterModule } from '@angular/router';
       },
       {
         path: 'dashboard',
+        component: AdminPageComponent,
         loadChildren: () =>
           import('./routing/dashboard/dashboard.module').then(
             (module) => module.DashboardModule
